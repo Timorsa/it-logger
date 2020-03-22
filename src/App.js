@@ -1,4 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
+import store from './store';
+import { Provider } from 'react-redux';
 
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
@@ -19,17 +21,19 @@ function App() {
 	});
 
 	return (
-		<Fragment>
-			<SearchBar />
-			<div className='container'>
-				<AddBtn />
-				<EditLogModal />
-				<AddLogModal />
-				<AddTechModal />
-				<TechListModal />
-				<Logs />
-			</div>
-		</Fragment>
+		<Provider store={store}>
+			<Fragment>
+				<SearchBar />
+				<div className='container'>
+					<AddBtn />
+					<EditLogModal />
+					<AddLogModal />
+					<AddTechModal />
+					<TechListModal />
+					<Logs />
+				</div>
+			</Fragment>
+		</Provider>
 	);
 }
 
