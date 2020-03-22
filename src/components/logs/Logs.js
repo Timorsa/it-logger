@@ -9,7 +9,7 @@ import LogItem from './LogItem';
 const Logs = ({ log: { logs, loading }, getLogs }) => {
 	useEffect(() => {
 		getLogs();
-	}, []);
+	}, [getLogs]);
 
 	if (loading || logs == null) {
 		return <Preloader />;
@@ -30,7 +30,8 @@ const Logs = ({ log: { logs, loading }, getLogs }) => {
 };
 
 Logs.propTypes = {
-	log: PropTypes.object.isRequired
+	log: PropTypes.object.isRequired,
+	getLogs: PropTypes.func.isRequired
 };
 
 // state.log (log is from the log reducer ==> /logReducers)
