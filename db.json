@@ -1,17 +1,9 @@
 {
   "logs": [
     {
-      "message": "Change network card in SERVER0007",
-      "attention": true,
-      "tech": "John Doe",
-      "date": "2020-03-22T17:42:13.359Z",
       "id": 1
     },
     {
-      "message": "HDD failed in WS004",
-      "attention": false,
-      "tech": "Sam Smith",
-      "date": "2020-03-22T17:42:33.990Z",
       "id": 2
     },
     {
